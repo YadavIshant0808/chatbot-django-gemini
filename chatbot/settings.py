@@ -130,7 +130,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GENERATIVE_AI_KEY = os.environ.get('GENERATIVE_AI_KEY')
+GENERATIVE_AI_KEY = os.getenv('GENERATIVE_AI_KEY')
 
 if not GENERATIVE_AI_KEY:
     raise ValueError('GENERATIVE_AI_KEY environment variable not set')
