@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-ds=ovb!y)*07(%9qo=h5md$=u-ne0fljg^sszei_*_1mr=x8j%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -77,13 +77,9 @@ WSGI_APPLICATION = 'chatbot.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'gvps-bhadohi-online-library:us-central1:fbaaaitool',
-        'PASSWORD': 'Fba0808@#',
-        'HOST': '34.136.246.255',
-        'PORT': '5432',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
