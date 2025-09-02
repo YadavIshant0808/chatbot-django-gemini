@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-from dotenv import load_dotenv
-load_dotenv()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -81,11 +79,11 @@ WSGI_APPLICATION = 'chatbot.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
+        'NAME': 'postgres',
+        'USER': 'gvps-bhadohi-online-library:us-central1:fbaaaitool',
+        'PASSWORD': 'Fba0808@#',
+        'HOST': '34.136.246.255',
+        'PORT': '5432',
     }
 }
 
@@ -130,7 +128,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GENERATIVE_AI_KEY = os.getenv('GENERATIVE_AI_KEY')
+GENERATIVE_AI_KEY = 'AIzaSyDP92MzUjIuTraqMCwHcV7I1RT5q1JcPrA'
 
-if not GENERATIVE_AI_KEY:
-    raise ValueError('GENERATIVE_AI_KEY environment variable not set')
